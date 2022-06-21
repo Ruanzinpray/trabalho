@@ -77,13 +77,13 @@ if (isset($_POST['login'])) {
     <h1 style="text-align: center;">Login</h1>
     <div class="form-outline mb-4">
     <label class="form-label" for="form2Example1">Email</label>
-      <input type="email" name="email" class="form-control" />
+      <input type="email" name="email" placeholder="Ex: aaaa@gmail.com" class="form-control" />
     </div>
 
 
     <div class="form-outline mb-4">
     <label class="form-label" for="form2Example2">Senha</label>
-      <input type="password" name="senha" class="form-control" />
+      <input type="password" name="senha" placeholder="Ex: senha12321 "class="form-control" />
     </div>
 
 
