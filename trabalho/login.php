@@ -71,8 +71,7 @@ if (isset($_POST['login'])) {
 </head>
 
 <body class="container-fluid ">
-
-
+  <div> <center> <img src="img/ivan.jpg" height="400" width="400"  alt="..."> </center> </div>
   <form class="container w-25 p-3" method="post" align="center">
     <h1 style="text-align: center;">Login</h1>
     <div class="form-outline mb-4">

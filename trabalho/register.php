@@ -75,6 +75,7 @@ if (isset($_POST['register'])) {
 </head>
 
 <body class="container-fluid ">
+<div> <center> <img src="img/ivan.jpg" height="400" width="400"  alt="..."> </center> </div>
   <h1 style="text-align: center;">Registrar-se</h1>
 
 
