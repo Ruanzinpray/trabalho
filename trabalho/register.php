@@ -39,6 +39,10 @@ if (isset($_POST['register'])) {
   $username = $_POST['nome'];
   $email = $_POST['email'];
   $password = $_POST['senha'];
+  $data = $_POST['dtnasc'];
+  $cep = $_POST['cep'];
+  $cidade = $_POST['cidade'];
+  $endereco = $_POST['endereco'];
   $password_hash = password_hash($password, PASSWORD_BCRYPT);
   $query = $connection->prepare("SELECT * FROM usuario WHERE email=:email");
   $query->bindParam("email", $email, PDO::PARAM_STR);
@@ -47,10 +51,14 @@ if (isset($_POST['register'])) {
     echo '<p class="alert alert-warning text-center error">Email já resgistrado!</p>';
   }
   if ($query->rowCount() == 0) {
-    $query = $connection->prepare("INSERT INTO usuario(nome,senha,email) VALUES (:nome,:password_hash,:email)");
+    $query = $connection->prepare("INSERT INTO usuario(nome,senha,email,dtnasc,cep,cidade,endereco) VALUES (:nome,:password_hash,:email,:dtnasc,:cep,:cidade,:endereco)");
     $query->bindParam("nome", $username, PDO::PARAM_STR);
     $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
     $query->bindParam("email", $email, PDO::PARAM_STR);
+    $query->bindParam("dtnasc", $data, PDO::PARAM_STR);
+    $query->bindParam("cep", $cep, PDO::PARAM_STR);
+    $query->bindParam("cidade", $cidade, PDO::PARAM_STR);
+    $query->bindParam("endereco", $endereco, PDO::PARAM_STR);
     $result = $query->execute();
     if ($result) {
       echo '<p class="alert alert-info text-center success">Registrado com sucesso!</p>';
@@ -92,10 +100,28 @@ if (isset($_POST['register'])) {
     </div>
 
     <div class="form-outline mb-4">
-      <input type="password" name="senha" class="form-control" />
-      <label class="form-label" for="form2Example2">Senha</label>
+      <input type="date" name="dtnasc" class="form-control" />
+      <label class="form-label" for="form2Example2">Data de nascimento</label>
     </div>
 
+    <div class="form-outline mb-4">
+      <input type="text" name="cidade" class="form-control" />
+      <label class="form-label" for="form2Example1">cidade</label>
+    </div>
+
+    <div class="form-outline mb-4">
+      <input type="number" name="cep" class="form-control" />
+      <label class="form-label" for="form2Example1">cep</label>
+    </div>
+
+    <div class="form-outline mb-4">
+      <input type="password" name="endereco" class="form-control" />
+      <label class="form-label" for="form2Example2">endereço</label>
+    </div>
+    <div class="form-outline mb-4">
+      <input type="password" name="senha" class="form-control" />
+      <label class="form-label" for="form2Example1">senha</label>
+    </div>
     <div class="row mb-4">
       <div class="col d-flex justify-content-center">
       </div>
