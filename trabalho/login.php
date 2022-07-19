@@ -12,12 +12,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="brand"><img src="img/logo.png" height="50" width="50" /></a>
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Rocket Dick</a>
+            <a class="navbar-brand" href="index.php">Rocket Dick</a>
             
             <div class="container">
                 
           <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <a href="index.html"> </a>
+            <span class="navbar-toggler-icon"></span> <a href="index.php"> </a>
           </button>
         
         </div>
@@ -45,7 +45,7 @@ if (isset($_POST['login'])) {
   } else {
     if (password_verify($password, $result['senha'])) {
       $_SESSION['user_id'] = $result['id'];
-      header('Location: index.html');
+      header('Location: index.php');
       echo '<html </html>';
     } else {
       echo '<p class="alert alert-warning text-center error">Senha ou email incorreto!</p>';

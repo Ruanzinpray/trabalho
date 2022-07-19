@@ -44,3 +44,5 @@ CREATE TABLE carrinho(
     PRIMARY KEY (id)
 );
 
+
+

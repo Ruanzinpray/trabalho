@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="brand"><img src="img/logo.png" height="100" width="100" /></a>
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Loja</a>
+      <a class="navbar-brand" href="index.php">Loja</a>
 
       <div class="container">
 
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.php">Contate-nos</a>

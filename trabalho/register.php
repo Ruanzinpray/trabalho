@@ -13,12 +13,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="brand"><img src="img/logo.png" height="50" width="50" /></a>
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Rocket Dick</a>
+            <a class="navbar-brand" href="index.php">Rocket Dick</a>
             
             <div class="container">
                 
           <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <a href="index.html"> </a>
+            <span class="navbar-toggler-icon"></span> <a href="index.php"> </a>
           </button>
         
         </div>
@@ -90,37 +90,37 @@ if (isset($_POST['register'])) {
   <form class="container w-25 p-3" method="post" action="" name="signup-form">
 
     <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example1">Nome</label>
       <input type="text" name="nome" class="form-control" />
-      <label class="form-label" for="form2Example1">Nome</label>
     </div>
 
     <div class="form-outline mb-4">
-      <input type="email" name="email" class="form-control" />
       <label class="form-label" for="form2Example1">Email</label>
+      <input type="email" name="email" class="form-control" />
     </div>
 
     <div class="form-outline mb-4">
-      <input type="date" name="dtnasc" class="form-control" />
       <label class="form-label" for="form2Example2">Data de nascimento</label>
+      <input type="date" name="dtnasc" class="form-control" />
     </div>
 
     <div class="form-outline mb-4">
-      <input type="text" name="cidade" class="form-control" />
       <label class="form-label" for="form2Example1">cidade</label>
+      <input type="text" name="cidade" class="form-control" />
     </div>
 
     <div class="form-outline mb-4">
-      <input type="number" name="cep" class="form-control" />
       <label class="form-label" for="form2Example1">cep</label>
+      <input type="number" name="cep" class="form-control" />
     </div>
 
     <div class="form-outline mb-4">
-      <input type="password" name="endereco" class="form-control" />
       <label class="form-label" for="form2Example2">endereço</label>
+      <input type="password" name="endereco" class="form-control" />
     </div>
     <div class="form-outline mb-4">
-      <input type="password" name="senha" class="form-control" />
       <label class="form-label" for="form2Example1">senha</label>
+      <input type="password" name="senha" class="form-control" />
     </div>
     <div class="row mb-4">
       <div class="col d-flex justify-content-center">
