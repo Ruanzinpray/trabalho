@@ -74,5 +74,36 @@
         </div>
       </div>
   </nav>
+
+  <div class="container">
+        <div class="detalhes row mt-50">
+            <div class="col">
+                <?php
+                include 'conn.php';
+                $id = $_GET['id'];
+                $connection = DB::getInstance();
+                $dados = $connection->query("SELECT * from produtos where id=$id");
+                $dados->setFetchMode(PDO::FETCH_ASSOC);
+                foreach ($dados as $d) {
+                ?>
+                    <img src="<?php echo $d['imagem'] ?>" width="600" height="560">
+            </div>
+            <div class="col mt-5">
+                <a><?php echo $d['nome'] ?><br></a>
+                <a class="fonte">Estoque: <?php echo $d['estoque'] ?> unidades<br></a>
+                <div class="mt-5">
+                    <a>A partir de R$ <?php echo $d['valor'] ?></a>
+                    <a class='mt-5'>Especificações:</a><br>
+                </div>
+                <a><form action='lib/addcar.php' method="POST"><button type=submit name='botao' id='botao' value='<?php echo $d['id']?>'class="btn btn-success p-2 d-flex justify-content-center">Adicionar ao carrinho</button></form></a>
+            <?php } ?>
+            </div>
+            <div class="desc mt-2">
+                <a class='align-center'>Especificações:</a><br>
+                <a class='textod'><?php echo $d['descricao'] ?></a>
+            </div>
+        </div>
+    </div>
+
  
 </body>

@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="brand"><img src="img/logo.png" height="50" width="50" /></a>
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Rocket Dick</a>
+            <a class="navbar-brand" href="index.php">Loja</a>
             
             <div class="container">
                 
@@ -68,7 +68,7 @@ if (isset($_POST['registrar'])) {
   }
 }
 ?>
-<div> <center> <img src="img/ivan.jpg" height="400" width="400"  alt="..."> </center> </div>
+
   <h1 style="text-align: center;">Registrar Item</h1>
 
 
@@ -94,8 +94,14 @@ if (isset($_POST['registrar'])) {
     </div>
 
     <div class="form-outline mb-4">
-      <label class="form-label" for="form2Example1">imagem</label>
+      <label class="form-label" for="form2Example1">Nome da imagem: img/nome.jpg</label>
       <input type="text" name="imagem" class="form-control" />
+      <label for="avatar">Selecione a imagem:</label>
+
+      <input type="file" id="input" 
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
     </div>
 
   <div class="form-outline mb-4">

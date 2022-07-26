@@ -45,6 +45,9 @@
             <li class="nav-item">
               <a class="nav-link" href="carrinho.php">Carrinho</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inserir.php">Inserir</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -119,7 +122,7 @@
                         </div>
                         <div class="card-footer bg-transparent">
                             <h5 class="card-text text-center border-0">R$ <?php echo $d['valor']; ?></h5>
-                            <a class="btn btn-info p-2 d-flex justify-content-center" id="botao" href="produtos.php?id=<?php echo $d['id'] ?>">Mais detalhes</a>
+                            <a class="btn btn-info p-2 d-flex justify-content-center"  id="botao" href="produtos.php?id=<?php echo $d['id'] ?>">Mais detalhes</a>
                         </div>
                     </div>
                 </div>
